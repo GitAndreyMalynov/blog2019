@@ -1,13 +1,18 @@
 body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
   background-color: #fff;
-  color: #333;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
 }
 
-p, ol, ul, td {
+ol,
+p,
+td,
+ul {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -19,17 +24,19 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
+a:link,
+a:visited {
+  background-color: lightgray;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+a:active,
+a:hover {
+  background-color: #d3d3d3d9;
 }
 
 th {
@@ -41,7 +48,8 @@ td {
 }
 
 div {
-  &.field, &.actions {
+  &.actions,
+  &.field {
     margin-bottom: 10px;
   }
 }
@@ -81,4 +89,55 @@ div {
 
 label {
   display: block;
+}
+
+.posts {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.posts__header {}
+
+.posts__content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.posts__footer {}
+
+.post {
+  border: 1px solid lightgray;
+  margin: 0 20px 20px 0;
+  width: 600px;
+}
+
+.post__header {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post__header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.post__created {
+  color: lightgray;
+}
+
+.post-show-more {
+  align-self: end;
+}
+
+.post__content {
+  padding: 0.75rem;
 }
