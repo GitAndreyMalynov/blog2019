@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <%if @current_user%>
+      <%= "Hello, #{@current_user.login}" %>
+      <%= link_to "Log out", logout_path %>
+    <%end%>
     <%= yield %>
   </body>
 </html>
